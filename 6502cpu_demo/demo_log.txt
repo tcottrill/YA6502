@@ -1,0 +1,2 @@
+Starting Program
+C:\source_github\6502cpu_demo\6502cpu_demo\sys_gl.cpp:CheckGLVersionSupport:113 DEBUG OpenGl Version supported 4.6
