@@ -42,9 +42,6 @@
     <ClInclude Include="sys_window.h">
       <Filter>Source Files\system_files</Filter>
     </ClInclude>
-    <ClInclude Include="cpu_6502n.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="cpu_handler.h">
       <Filter>Source Files</Filter>
     </ClInclude>
@@ -56,6 +53,9 @@
     </ClInclude>
     <ClInclude Include="stb_image_write.h">
       <Filter>Source Files\system_files</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu_6502.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -87,11 +87,11 @@
     <ClCompile Include="asteroid.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cpu_6502n.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="emu_vector_draw.cpp">
       <Filter>Source Files\system_files</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu_6502.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

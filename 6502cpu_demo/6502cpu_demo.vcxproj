@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="cpu_6502n.h" />
+    <ClInclude Include="cpu_6502.h" />
     <ClInclude Include="cpu_handler.h" />
     <ClInclude Include="emu_vector_draw.h" />
     <ClInclude Include="glext.h" />
@@ -162,7 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="asteroid.cpp" />
-    <ClCompile Include="cpu_6502n.cpp" />
+    <ClCompile Include="cpu_6502.cpp" />
     <ClCompile Include="emu_vector_draw.cpp" />
     <ClCompile Include="sys_gl.cpp" />
     <ClCompile Include="sys_log.cpp" />
