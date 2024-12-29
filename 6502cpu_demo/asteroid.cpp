@@ -16,7 +16,7 @@
 //For OpenGL Commands 
 #include "sys_gl.h"
 //Our CPU Core
-#include "cpu_6502n.h"
+#include "cpu_6502.h"
 //For logging
 #include "sys_log.h"
 //For simple OpenGL line drawing
