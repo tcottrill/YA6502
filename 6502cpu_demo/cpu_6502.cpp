@@ -8,6 +8,7 @@
 // Notes
 // 11/22/24 added undoucumented isb opcode, will work to add the rest later.
 // 12/28/24 Rewrote the main loop to resolve an issue with the cycle counting being consistently undereported.
+// 01/03/25 Discovered an edge case where clocktickstotal was not being set to zero at init, causing an immediate crash. 
 
 #include <stdio.h>
 #include "cpu_6502.h"
@@ -15,7 +16,7 @@
 #include <string>
 //#include "timer.h"
 
-//Version 2024.12.29
+//Version 2024.7.14
 
 #define bget(p,m) ((p) & (m))
 
@@ -881,7 +882,7 @@ void cpu_6502::init6502(uint16_t addrmaskval)
 	PPC = 0;
 	addrmask = addrmaskval;
 	_irqPending = 0;
-
+	
 	instruction[0x00] = &cpu_6502::brk6502; adrmode[0x00] = &cpu_6502::implied6502;
 	instruction[0x01] = &cpu_6502::ora6502; adrmode[0x01] = &cpu_6502::indx6502;
 	instruction[0x02] = &cpu_6502::nop6502; adrmode[0x02] = &cpu_6502::implied6502;
@@ -1199,6 +1200,9 @@ void cpu_6502::reset6502()
 	PC |= get6502memory(0xFFFD & addrmask) << 8;
 	if (debug) { wrlog("reset: PC is %X", PC); }
 	clockticks6502 += 6;
+	// This is super important, otherwise a memory corruption could set clocktickstotal to anything.
+	// It needs to be zero at reset.
+	clocktickstotal = 0;
 }
 
 // Non maskerable interrupt
