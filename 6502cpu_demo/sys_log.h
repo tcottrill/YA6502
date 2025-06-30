@@ -36,6 +36,7 @@ For more information, please refer to <http://unlicense.org/>
 #define LogClose() Log::close()
 #define LOG_DEBUG(str,...) Log::write("%s:%s:%d DEBUG " str, __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__)
 #define LOG_ERROR(str,...) Log::write("%s:%s:%d ERROR " str, __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define LOG_INFO(str,...) Log::write("%s:%s:%d INFO " str, __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__)
 #define WRLOG(str,...) Log::write( str, ##__VA_ARGS__)
 #define wrlog(str,...) Log::write( str, ##__VA_ARGS__)
 
