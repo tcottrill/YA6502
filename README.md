@@ -7,18 +7,16 @@ This isn't the fastest CPU core available, since all stack and zero page accesse
 A very bare bones demo of asteroids is bundled with the cpu core so you can see how it is used. It requires the roms from the latest MAME (TM) "asteroid" romset to run. (Not included).
 Visual Studio 2019 or higher is required to compile and run. 
 
-If this is used with an NES Emulator, the ADC and SBC code will need to be modified. 
+This new version is 100% compatible with the NES 2A03, 6502 NMOS, 6502 CMOS, and the 6510. Passes all Klaus Dorman tests for the 6502 and 65C02 , all undocumented opcodes supported.
 
 Acknowledgements:
 
 Timing code taken from Fake6502
 http://rubbermallet.org/fake6502.c 
 
-SBC and ADC code taken from M.A.M.E (TM)
-https://www.mamedev.org/
-
-The rest based on the original C version of CPU code by Neil Bradley.
+Code based on the original C version of CPU code by Neil Bradley.
 https://www.zophar.net/6502/m6502.html
 
  
+
 
